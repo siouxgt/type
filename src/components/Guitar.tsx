@@ -7,8 +7,12 @@ type Guitar = {
 
 }
 
+type GuitarProps = {
+    guitar : Guitar, 
+    addToCart: (item: Guitar) => void
+}
 
-export default function Guitar ({guitar, addToCart}) {
+export default function Guitar ({guitar, addToCart} : GuitarProps) {
 
     const { id, name, image, description, price} = guitar
 

@@ -1,8 +1,27 @@
-import { useCar } from "../hooks/useCar"
+import type { Guitar, carItem } from "../types"
+
+type HeadearProps = {
+
+    car: carItem[]
+    removeFromCar: (id: Guitar['id']) => void
+    incrementQuantity: (id: Guitar['id']) => void
+    decreseQuantity: (id: Guitar['id']) => void
+    clearCar: () => void
+    isEmpty: boolean
+    carTotal: number
+}
 
 
 
-export default function Headear ({car, removeFromCar, clearCar, incrementQuantity, decreseQuantity, isEmpty, carTotal}) {
+export default function Headear ({
+    car, 
+    removeFromCar, 
+    clearCar, 
+    incrementQuantity, 
+    decreseQuantity, 
+    isEmpty, 
+    carTotal} : 
+    HeadearProps) {
   
 
     return(
